@@ -1,33 +1,72 @@
-# Challenge 1: App with Emoji-Only UI
+# 🌤️😊🌧️ Mood Weather App
 
-<img src="../assets/emojis.png" width="700" alt="Emojis">
+An emoji-only interactive web app that translates your mood into weather patterns! Select how you're feeling and watch the weather change to match your vibe.
 
-## Themes
-- Build with Chainguard Containers
-- Get weird
+## ✨ Features
 
-## The Challenge
-Build a fully functional application where the entire user interface uses ONLY emojis. No text allowed in any interactive elements - buttons, navigation, labels, everything must be emojis. Extra points if, like, everything is emojis.
+- **🎯 6 Moods**: Choose from happy, sad, angry, love, tired, or excited
+- **🌈 Dynamic Weather**: Each mood generates unique weather conditions
+- **🔀 Shuffle**: Get random weather variations for your current mood
+- **💾 History**: Save your favorite mood-weather combinations
+- **📊 Visual History**: See all your saved combinations at a glance
 
-## Requirements
-- All UI elements must be emojis only (no text in the interface)
-- Ideally the app will actually do something
-- Must be containerized using Chainguard Containers. You can set it up with a Dockerfile and we'll build and run locally. If it's a web app, it should able to be run on some port and be seen locally. If it's a CLI app, we'll run the default entrypoint and go from there. Feel free to give us directions in the README (replace this file).
+## 🏗️ Built With
 
-## Dumb Ideas
+- Pure HTML, CSS, and JavaScript
+- Chainguard nginx container
+- 100% emoji interface (zero text in UI!)
 
-Stuck? Here are some derivative ideas!
+## 🚀 Running the App
 
-- Calculator (🔢 ➕ ➖ ✖️ ➗)
-- To Do app (✅ ❌ 📝 🗑️)
-- Weather app (☀️ 🌧️ ❄️ 🌡️)
-- Music player (▶️ ⏸️ ⏭️ 🔀 🔁)
-- Mini game (🎮)
-- Demonic energy detector (😈)
-- Beanie baby collection database / sorter (🐢🧸, topical!)
+### Prerequisites
+- Docker installed on your system
 
-## Submission
-To submit, simply replace the contents of this folder (round_1) with the code for your project. Make sure to replace this README.md with instructions on getting your project running. Also make sure your vibelympics repository is public and that you've pushed all the code you want us to see. We will pull in your submission directly from your repository.
+### Build and Run
 
-## Deadline
-December 4, 11:59 PM EST
+1. Build the Docker image:
+```bash
+docker build -t mood-weather-app .
+```
+
+2. Run the container:
+```bash
+docker run -p 8080:8080 mood-weather-app
+```
+
+3. Open your browser and navigate to:
+```
+http://localhost:8080
+```
+
+## 🎮 How to Use
+
+1. **Select Your Mood**: Click on any emoji face (😊 😢 😠 😍 😴 🤩)
+2. **View Weather**: The app shows matching weather and temperature
+3. **Shuffle (🔀)**: Get a different weather for the same mood
+4. **Save (💾)**: Save your current mood-weather combo to history
+5. **Reset (🔄)**: Clear current selection and start fresh
+6. **History (📊)**: View all your saved combinations
+
+## 🌟 Emoji UI Elements
+
+All interactive elements use only emojis:
+
+- **Moods**: 😊 😢 😠 😍 😴 🤩
+- **Weather**: ☀️ 🌈 🌤️ ✨ 🌧️ ☔ 🌊 💧 ⚡ 🔥 🌪️ 💥 💕 🌸 🌺 🦋 🌙 ⭐ 🌌 💤 🎉 🎊 🎈 🚀
+- **Temperature**: 🌡️⬆️ 🌡️⬇️ 🌡️➡️ 🌡️❤️
+- **Actions**: 🔀 💾 🔄
+- **History**: 📊
+
+## 🎨 Design Philosophy
+
+The app follows the "get weird" theme by creating an emotional weather forecast system. Your feelings become meteorological events, saved as a personal mood-weather journal!
+
+## 🐳 Container Details
+
+- Base Image: `cgr.dev/chainguard/nginx:latest`
+- Exposed Port: 8080
+- Minimal, distroless container for security
+
+---
+
+**Vibelympics Round 1 Submission** 🏆
